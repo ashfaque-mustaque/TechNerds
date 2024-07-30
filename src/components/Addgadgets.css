@@ -1,0 +1,42 @@
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+  
+  .animated-border {
+    position: relative;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .card::before,
+  .card::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    transition: all 0.5s;
+  }
+  
+  .card::before {
+    background-image: linear-gradient(135deg, #6b7280, transparent);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+  }
+  
+  .card::after {
+    background-image: linear-gradient(45deg, transparent, #6b7280);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+  }
+  
+  .card:hover::before,
+  .card:hover::after {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
