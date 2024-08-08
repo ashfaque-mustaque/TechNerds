@@ -13,8 +13,8 @@ const Header = () => {
           className="text-2xl font-bold inline-block mr-4 py-2 whitespace-nowrap text-white hover:text-yellow-400 transition duration-300 ease-in-out"
           to="/"
         >
-          Cinema{" "}
-          <span className="font-extrabold text-yellow-300">Critique</span>
+          Tech{" "}
+          <span className="font-extrabold text-yellow-300">Nerds</span>
         </Link>
       </div>
       {useAppstate.login ? (
